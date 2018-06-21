@@ -1,0 +1,22 @@
+.p-main-visual {
+  text-align: center;
+
+  &__title {
+    @include _margin(0, 0, .5);
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    @include _font-size-line-height($_base-font-size-px * 2);
+    @include _padding(0, 0, .5);
+  }
+
+  &__content {
+    &, a {
+      color: #fff;
+    }
+  }
+
+  &__action {
+    @include _margin-top(1);
+  }
+}

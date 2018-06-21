@@ -1,0 +1,22 @@
+.#{$_prefix}c-entries {
+  @include _list-unstyled();
+
+  &__item {
+    @include _margin(1, 0, 0);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__item-date {
+    display: block;
+    font-weight: bold;
+  }
+
+  .#{$_prefix}c-media {
+    &__figure {
+      max-width: 25%;
+    }
+  }
+}

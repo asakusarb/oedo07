@@ -1,0 +1,48 @@
+.p-vertical-media {
+  @extend .#{$_prefix}c-card;
+  background-color: transparent;
+  box-shadow: none;
+
+  &__figure {
+    @extend .#{$_prefix}c-card__figure;
+    @include _margin(0, 0, .5);
+  }
+
+  &__body {
+    @extend .#{$_prefix}c-card__body;
+    margin: 0;
+    padding: 0;
+
+    > :first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    @include _font-size-line-height($_base-font-size);
+    font-weight: bold;
+    padding: 0;
+  }
+
+  &__lead {
+    margin: 0;
+    padding: 0;
+    color: $_color-gray;
+  }
+
+  &__content {
+    @include _margin(.25, 0, 0);
+    padding: 0;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__action {
+    @include _margin(.5, 0, 0);
+    border: none;
+    padding: 0;
+  }
+}

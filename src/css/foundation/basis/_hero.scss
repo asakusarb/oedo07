@@ -1,0 +1,7 @@
+.#{$_prefix}c-hero {
+  @include _overlay($color-accent, .8);
+
+  .#{$_prefix}c-hero__header {
+    @include _padding(.5, 0, 0);
+  }
+}

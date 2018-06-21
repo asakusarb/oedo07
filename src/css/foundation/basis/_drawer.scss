@@ -1,0 +1,9 @@
+.#{$_prefix}c-drawer {
+  &__toggle {
+    @include _transition(transform);
+
+    &[aria-expanded="true"] {
+      transform: rotate(90deg);
+    }
+  }
+}

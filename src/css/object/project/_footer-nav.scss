@@ -1,0 +1,15 @@
+.p-footer-nav {
+  @include _font-size-line-height(14px);
+
+  &__list {
+    @include _list-unstyled();
+  }
+
+  &__item {
+    @include _padding(0, 0, .5);
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

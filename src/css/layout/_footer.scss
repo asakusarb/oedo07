@@ -1,0 +1,11 @@
+.#{$_prefix}l-footer {
+  background-color: $_color-text;
+  color: #fff;
+  @include _padding(2, 0, 0);
+
+  .p-footer-nav {
+    a {
+      color: $_color-gray;
+    }
+  }
+}

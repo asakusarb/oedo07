@@ -1,0 +1,43 @@
+.#{$_prefix}c-pagination {
+  text-align: center;
+  font-size: 0;
+
+  &__item,
+  &__item-link,
+  &__item-ellipsis {
+    margin: 0 3px;
+    display: inline-block;
+    display: inline-flex;
+    @include _square(30px);
+    @include _font-size($_base-font-size-px - 2);
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-link {
+    background-color: _lighter($_color-gray);
+    color: $_color-gray;
+    @include _transition-all();
+    text-decoration: none;
+
+    @include _hover() {
+      background-color: _light($_color-text);
+      color: #fff;
+    }
+  }
+
+  &__item-ellipsis {
+    background-color: _lighter($_color-gray);
+    color: $_color-gray;
+  }
+
+  [aria-current="page"] {
+    background-color: _light($_color-text);
+    color: #fff;
+  }
+
+  * + & {
+    @include _margin-top(1);
+  }
+}

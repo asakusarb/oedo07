@@ -1,0 +1,14 @@
+.#{$_prefix}c-page-header {
+  text-align: center;
+  @include _padding(3, 0);
+  @include _background-image-cover();
+  @include _overlay($color-accent, .8);
+  position: relative;
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    @include _font-size-line-height($_base-font-size-px * 2);
+  }
+}

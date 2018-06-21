@@ -1,0 +1,34 @@
+.#{$_prefix}c-alert {
+  border-color: $color-accent;
+  color: _dark($color-accent);
+
+  &--primary {
+    border: none;
+    background-color: _light($color-primary);
+    color: _dark($color-primary);
+  }
+
+  &--success {
+    border: none;
+    background-color: _light($color-success);
+    color: _dark($color-success);
+  }
+
+  &--info {
+    border: none;
+    background-color: _light($color-info);
+    color: _dark($color-info);
+  }
+
+  &--warning {
+    border: none;
+    background-color: _light($color-warning);
+    color: _dark($color-warning);
+  }
+
+  &--danger {
+    border: none;
+    background-color: _light($color-danger);
+    color: _dark($color-danger);
+  }
+}

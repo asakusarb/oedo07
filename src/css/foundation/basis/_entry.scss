@@ -1,0 +1,18 @@
+.#{$_prefix}c-entry {
+  &__header {
+    @include _margin(0, 0, 2);
+  }
+
+  &__title {
+    @include _font-size-line-height($_base-font-size-px * $_h2-font-size-scale);
+  }
+
+  &__meta {
+    @include _margin(.5, 0, 0);
+    color: $_color-gray;
+  }
+
+  &__content {
+    @include _content(1);
+  }
+}

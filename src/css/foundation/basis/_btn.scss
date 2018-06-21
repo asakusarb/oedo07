@@ -1,0 +1,61 @@
+.#{$_prefix}c-btn {
+  @include _transition(background-color);
+  border: 2px solid $color-accent;
+  color: $color-accent;
+  font-weight: bold;
+  @include _padding(.5, 1);
+
+  @include _hover() {
+    background-color: $color-main;
+  }
+
+  &--ghost {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &--primary {
+    border-color: $color-primary;
+    color: $color-primary;
+
+    @include _hover() {
+      background-color: _light($color-primary);
+    }
+  }
+
+  &--success {
+    border-color: $color-success;
+    color: $color-success;
+
+    @include _hover() {
+      background-color: _light($color-success);
+    }
+  }
+
+  &--info {
+    border-color: $color-info;
+    color: $color-info;
+
+    @include _hover() {
+      background-color: _light($color-info);
+    }
+  }
+
+  &--warning {
+    border-color: $color-warning;
+    color: $color-warning;
+
+    @include _hover() {
+      background-color: _lightest($color-warning);
+    }
+  }
+
+  &--danger {
+    border-color: $color-danger;
+    color: $color-danger;
+
+    @include _hover() {
+      background-color: _lightest($color-danger);
+    }
+  }
+}

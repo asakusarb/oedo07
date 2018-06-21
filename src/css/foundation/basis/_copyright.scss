@@ -1,0 +1,10 @@
+.#{$_prefix}c-copyright {
+  @include _margin(2, 0, 0);
+  @include _font-size-line-height(14px);
+  border-top: 1px solid _darker($_color-gray);
+  @include _padding(2, 0);
+
+  a {
+    color: $_color-gray;
+  }
+}
