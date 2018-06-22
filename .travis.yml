@@ -10,9 +10,9 @@ branches:
 env:
   global:
   - GIT_COMMITTER_NAME=travis-ci
-  - GIT_COMMITTER_EMAIL=inc@2inc.org
+  - GIT_COMMITTER_EMAIL=cam51p.g@gmail.com
   - GIT_AUTHOR_NAME=travis-ci
-  - GIT_AUTHOR_EMAIL=inc@2inc.org
+  - GIT_AUTHOR_EMAIL=cam51p.g@gmail.com
   - secure: GRJl1CDpqgCF68iMvkL2IXz8m5d49AIvnxObgt2xP2fPdeTQO4QIj/T0/yJ3pkSVUQM/dZU3cdMXl7yzysngN2YAniSXR297dX65apgCmluyPUNebWfHCxE3QOOTHly0TbAmdiVCemWNzsAIDEiJb+LG4QGLmClxq+35irFvukDeIsS1zfjGEhSd7ptQ8FUs/+hHcvDXAY2q6qScA/ZqRuWL3kypUUTd10EU7cqnlrPB28RVBVK4YG7gSg/67BUdxLQyKw247v0670ITNGZfdeU50VHS2nNZa+09m1UbS1xtUfZOqWrShh/0k75VZ7KlMMJzrg/GavsHaXnvz2UtxdVtWOm/a519oossWFXNMvZCdS9cJGnc4QA6Mkei+PHKxjw1CtkL0eDGOz4rjHocsmsxwOYp3gk7qHgXSxRkYw4UIZ1zD0NMQj4RvuNuuSVKUosZ0hjuYY9OaOJM+qxIqE9TDYm57zWIFOwuu5zJc01uIZYZN2XWSAd1R9VYvAY2PuIP92GbYVTvWXUGYmemhpmPYwTBR7wZfIF7cN2v6kZ8pUs6G9GpbEI8oToqumlvnhS+sH4PI1y8YVWadgbOCtdKw+PTXdT8GiM9qfNzUlTnoz5fVzCbw3XhiBqN/6DBF3EMgB/m2JLtZJbIMaV0sAJTnK3aF1jX4GXgHIZbkTY=
 cache:
   directories:
@@ -33,4 +33,4 @@ deploy:
   file: integrity.zip
   on:
     tags: true
-    repo: sass-basis/integrity
+    repo: asakusarb/oedo07
