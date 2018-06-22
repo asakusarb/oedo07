@@ -1,4 +1,4 @@
-# Oedo Ruby Kaigi 07 Website
+# 大江戸Ruby会議07
 - Ruby conference by Asakusa.rb
 - 2018/9/15 Sat.
 - At Asakusa [Kaminari-5656-Kaikan (Google Maps)](https://www.google.co.jp/maps/place/%E9%9B%B75656%E4%BC%9A%E9%A4%A8/@35.7139212,139.7939306,17z/data=!4m8!1m2!2m1!1z6Zu344K044Ot44K044Ot5Lya6aSo!3m4!1s0x60188fba1d7f9887:0xbd26bddbf96c3891!8m2!3d35.7167015!4d139.7960941) 5F,6F
