@@ -6,6 +6,7 @@ branches:
   only:
   - master
   - develop
+  - fix-travisyml
   - "/v\\d+\\.\\d+\\.\\d+?.*/"
 env:
   global:
