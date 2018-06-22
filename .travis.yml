@@ -23,7 +23,7 @@ before_script:
   - git config --global user.name 'Travis CI'
   - git config --global user.email 'cam51p.g@gmail.com'
   - rm -rf public
-  - git clone --depth=1 --branch=gh-pages https://github.com/asakusarb/oedo07.github.io.git public
+  - git clone --depth=1 --branch=gh-pages https://github.com/asakusarb/oedo07.git public
   - pushd public
   - git ls-files | xargs -I {} rm -rf {}
   - popd
@@ -33,4 +33,4 @@ script:
   - cd public
   - git add -A
   - git commit -m 'Update'
-  - 'git push --force https://$GH_TOKEN@github.com/asakusarb/oedo07.github.io.git HEAD:gh-pages'
+  - 'git push --force https://$GH_TOKEN@github.com/asakusarb/oedo07.git HEAD:gh-pages'
