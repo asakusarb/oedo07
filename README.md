@@ -5,7 +5,7 @@
 
 ## Basis
 * Repository: https://github.com/sass-basis/basis/
-* Documents : https://sass-basis.github.io/T
+* Documents : https://sass-basis.github.io/
 
 ## Get started
 ### For src user
