@@ -1,7 +1,0 @@
-node_modules/
-.DS_Store
-gh-pages/
-integrity.zip
-public/
-*.log
-.sass-cache/
