@@ -6,6 +6,7 @@ branches:
   only:
   - master
   - develop
+  - fix-travisyml
   - "/v\\d+\\.\\d+\\.\\d+?.*/"
 env:
   global:
@@ -13,24 +14,23 @@ env:
   - GIT_COMMITTER_EMAIL=cam51p.g@gmail.com
   - GIT_AUTHOR_NAME=travis-ci
   - GIT_AUTHOR_EMAIL=cam51p.g@gmail.com
-  - secure: GRJl1CDpqgCF68iMvkL2IXz8m5d49AIvnxObgt2xP2fPdeTQO4QIj/T0/yJ3pkSVUQM/dZU3cdMXl7yzysngN2YAniSXR297dX65apgCmluyPUNebWfHCxE3QOOTHly0TbAmdiVCemWNzsAIDEiJb+LG4QGLmClxq+35irFvukDeIsS1zfjGEhSd7ptQ8FUs/+hHcvDXAY2q6qScA/ZqRuWL3kypUUTd10EU7cqnlrPB28RVBVK4YG7gSg/67BUdxLQyKw247v0670ITNGZfdeU50VHS2nNZa+09m1UbS1xtUfZOqWrShh/0k75VZ7KlMMJzrg/GavsHaXnvz2UtxdVtWOm/a519oossWFXNMvZCdS9cJGnc4QA6Mkei+PHKxjw1CtkL0eDGOz4rjHocsmsxwOYp3gk7qHgXSxRkYw4UIZ1zD0NMQj4RvuNuuSVKUosZ0hjuYY9OaOJM+qxIqE9TDYm57zWIFOwuu5zJc01uIZYZN2XWSAd1R9VYvAY2PuIP92GbYVTvWXUGYmemhpmPYwTBR7wZfIF7cN2v6kZ8pUs6G9GpbEI8oToqumlvnhS+sH4PI1y8YVWadgbOCtdKw+PTXdT8GiM9qfNzUlTnoz5fVzCbw3XhiBqN/6DBF3EMgB/m2JLtZJbIMaV0sAJTnK3aF1jX4GXgHIZbkTY=
 cache:
   directories:
   - node_modules
 install:
-- npm install
+  - npm install
+before_script:
+  - git config --global user.name 'Travis CI'
+  - git config --global user.email 'cam51p.g@gmail.com'
+  - rm -rf public
+  - git clone --depth=1 --branch=gh-pages https://github.com/asakusarb/oedo07.git public
+  - pushd public
+  - git ls-files | xargs -I {} rm -rf {}
+  - popd
 script:
-- npm run gulp build
-- ls -la public
-after_success:
-- bash ./bin/gh-pages.sh
-before_deploy:
-- npm run gulp zip
-deploy:
-  provider: releases
-  api_key:
-    secure: qfVfHNl2wSFi0hNGCCMzaB0D+iNNfb3GXPxs/sTpRUxEn9EvC27eMOsS9NOC+jOYFIa72BBJzJJNAvwv8dDfVo+YNgRhBe9aVrq2WSWssKJiLSO0MVTt1ZXy05dpm4TK4AGdAlNOYIsiq+M1yuBjb5gfpVKGn+XRAWushwNNleoKTgJoEYi/GJNhvaxr5D2bdqp8uzFtdGw+y08oDyTMbNjZ8MC/J0eeEky3LAS0YbXKKmS1OMnLjAUsMPH8y6yRVbpKoJZcfNZgtHm5thwrgUfy9IIVwHOQ7m65E4uvXd2nG3/qn2hd5GP4mc5T5USmZAesh0OCMNEjsF3lbOTsjGJiKTQG3mm607AalUKHBeEdfMtHvNo+znVV10E+VG4Ept561XmIL396q2uVeVNqv7wKTHYuFR6deBijGEGk4TjfFfM/WJdRiYTwx+Ulc2VbdMjjia0vsq2L5JNYxD37ckUgQcg8hj/dqPBprU4/c6CeIowLt4syvZaekr1mKVtVOx75gqZ0KAJCUXsi+51prAYY/gzHx0hrgjTE8hO5o547ouiuKtf8D6Obv3StE7SM9SneYtjUgrbI+LMYvWJvGDy54gBiceZuzYIyMqM9ahFyhgMSrMBNmkiwANN8iDInm16ZWA+HsE1YpbZuCqDVO0/CNWVf3Anq66wpQrs5w7w=
-  file: integrity.zip
-  on:
-    tags: true
-    repo: asakusarb/oedo07
+  - npm run gulp build
+  - ls -la public
+  - cd public
+  - git add -A
+  - git commit -m 'Update'
+  - 'git push --force https://$GH_TOKEN@github.com/asakusarb/oedo07.git HEAD:gh-pages'
