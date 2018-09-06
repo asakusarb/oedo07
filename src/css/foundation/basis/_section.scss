@@ -18,6 +18,17 @@
   &__content {
     @include _content(1);
   }
+  
+  .center {
+    text-align: center;
+  }
+}
+
+/* map */
+#map {
+  position: relative;
+  width: 700px;
+  height: 300px;
 }
 
 /* タイムテーブル */
