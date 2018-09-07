@@ -4805,7 +4805,7 @@ label + label {
   ._c-breadcrumbs, ._c-breadcrumbs a {
     color: #999; }
   ._c-breadcrumbs a {
-    text-decoration: underline; }
+    text-decoration: none; }
 
 ._c-btn {
   -webkit-transition: background-color 0.1s ease-out;
@@ -4856,7 +4856,8 @@ label + label {
   border-top: 1px solid #444444;
   padding: 3.5rem 0; }
   ._c-copyright a {
-    color: #999; }
+    color: #999;
+    text-decoration: none; }
 
 ._c-drawer__toggle {
   -webkit-transition: -webkit-transform 0.1s ease-out;
@@ -5211,6 +5212,9 @@ html[data-window-scroll="false"] [data-l="container"] {
 
 ._l-container {
   overflow: hidden; }
+
+a {
+  text-decoration: none; }
 
 ._l-footer {
   background-color: #333;
