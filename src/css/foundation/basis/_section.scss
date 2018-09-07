@@ -125,13 +125,16 @@ ul.speaker {
     overflow: hidden;
       th{
         list-style:none;
+        padding: 30px;
       }
       td{
-        margin-left: 40px;
+        margin-left: 0px;
+        border: none;
       }
       th,td{
         width: 100%;
         display: list-item;
+        list-style-type: none;
       }
     }
   }
