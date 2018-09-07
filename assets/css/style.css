@@ -5159,12 +5159,15 @@ ul.speaker {
     width: 100%;
     overflow: hidden; }
     table.time tbody th {
-      list-style: none; }
+      list-style: none;
+      padding: 30px; }
     table.time tbody td {
-      margin-left: 40px; }
+      margin-left: 0px;
+      border: none; }
     table.time tbody th, table.time tbody td {
       width: 100%;
-      display: list-item; } }
+      display: list-item;
+      list-style-type: none; } }
 
 html[data-sticky-footer="true"] [data-l="container"] > [data-l="header"],
 html[data-sticky-footer="true"] [data-l="container"] > [data-l="footer"],
