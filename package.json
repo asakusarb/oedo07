@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "node-sass": "3.13.1",
+    "normalize-url": "^4.5.1",
     "sass-basis": "^6.5.0",
     "sass-basis-layout": "^7.0.2",
     "yargs": "^7.0.0"
