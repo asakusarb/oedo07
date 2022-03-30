@@ -30,7 +30,7 @@
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "dependencies": {
-    "node-sass": "3.13.1",
+    "node-sass": "7.0.0",
     "normalize-url": "^4.5.1",
     "sass-basis": "^6.5.0",
     "sass-basis-layout": "^7.0.2",
